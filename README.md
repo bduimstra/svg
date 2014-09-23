@@ -1,0 +1,4 @@
+svg
+===
+
+SVG Fallback
