@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SVG</title>
+
+	<script src="svg.js"></script>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		.hidden {
+			display: none;
+			visibility: hidden;
+		}
+
+		svg {
+			height: 300px;
+			width: 300px;
+			fill: #06C;
+		}
+
+		use {
+			height: 100%;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="hidden">
+		<svg id="svg-definitions">
+			<defs>
+				<g id="circle">
+					<circle cx="100" cy="100" r="100"/>
+				</g>
+			</defs>
+		</svg>
+	</div>
+
+	<svg viewBox="0 0 200 200">
+		<use xlink:href="#circle" />
+	</svg>
+	<img data-svg-fallback="blue-circle.png" />
+
+	<svg viewBox="0 0 200 200">
+		<use xlink:href="#circle" />
+	</svg>
+	<img data-svg-fallback="blue-circle.png" />
+
+</body>
+</html>
